@@ -18,7 +18,7 @@ st.set_page_config(
 
 @st.cache_resource
 def load_rnn_resources():
-    model = load_model(MODEL_PATH)
+    model = load_model(MODEL_PATH, compile=False)
     with open(TOKENIZER_PATH, "rb") as f:
         tokenizer = pickle.load(f)
     return model, tokenizer
@@ -136,3 +136,4 @@ st.caption(
     "ℹ️ The RNN model performs linguistic analysis on news articles. "
     "Gemini provides optional reasoning-based explanations using the user's API key."
 )
+
