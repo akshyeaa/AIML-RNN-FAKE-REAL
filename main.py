@@ -6,7 +6,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import google.generativeai as genai
 
-MODEL_PATH = "fake_news_rnn.keras"
+MODEL_PATH = "fake_news_rnn.h5"
 TOKENIZER_PATH = "tokenizer.pickle"
 MAX_LEN = 150
 
@@ -136,4 +136,5 @@ st.caption(
     "ℹ️ The RNN model performs linguistic analysis on news articles. "
     "Gemini provides optional reasoning-based explanations using the user's API key."
 )
+
 
